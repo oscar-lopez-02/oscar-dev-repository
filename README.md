@@ -3,7 +3,7 @@
 This repository contains my development projects, coursework, and technical documentation related to software engineering and embedded systems.
 
 ## Live Demo GitHub Pages Site
-Visit my site here: [oscar-lopez-02.github.io/oscar-dev-portafolio](https://oscar-lopez-02.github.io/oscar-dev-repository)
+Visit my site here: [oscar-lopez-02.github.io/oscar-dev-repository](https://oscar-lopez-02.github.io/oscar-dev-repository)
 
 ## Courses
 

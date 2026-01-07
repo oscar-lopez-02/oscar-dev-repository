@@ -1,6 +1,15 @@
-# Oscar Lopez - Development Repository
+# Oscar Lopez - Engineering Repository
 
 Repository housing my ongoing coursework and lab projects in Microcontrollers, Data Structures, and SolidWorks design.
+
+Microcontrollers: Python/C code for RP2040 and embedded I/O.
+
+Algorithms: C++ implementations of Hash Tables and Search Trees.
+
+CAD: SolidWorks part files for engineering practice.
+
+Status: Active Development (Updated Jan 2026)
+
 
 ## Live Demo GitHub Pages Site
 Visit my site here: [oscar-lopez-02.github.io/oscar-dev-repository](https://oscar-lopez-02.github.io/oscar-dev-repository)

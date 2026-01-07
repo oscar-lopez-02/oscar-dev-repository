@@ -1,6 +1,6 @@
 # Oscar Lopez - Development Repository
 
-This repository contains my development projects, coursework, and technical documentation related to software engineering and embedded systems.
+Repository housing my ongoing coursework and lab projects in Microcontrollers, Data Structures, and SolidWorks design.
 
 ## Live Demo GitHub Pages Site
 Visit my site here: [oscar-lopez-02.github.io/oscar-dev-repository](https://oscar-lopez-02.github.io/oscar-dev-repository)

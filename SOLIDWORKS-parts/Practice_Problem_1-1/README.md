@@ -3,7 +3,7 @@
 [![View on Website](https://img.shields.io/badge/View_Live_Website-000000?style=for-the-badge&logo=github&logoColor=white)](https://oscar-lopez-02.github.io/oscar-dev-portafolio/SOLIDWORKS-parts/Practice_Problem_1-1/Practice_Problem_1-1.html)
 
 ## 📖 Project Overview
-This project demonstrates parametric modeling in SolidWorks 2024, designed to meet **CSWA certification** standards. The part uses global variables to allow for rapid resizing of dimensions without breaking the geometry.
+This project demonstrates parametric modeling in SolidWorks, designed to meet **CSWA certification** standards. The part uses global variables to allow for rapid resizing of dimensions without breaking the geometry.
 
 ## 🛠 Technical Specs
 | Property | Value |

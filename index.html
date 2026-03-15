@@ -3,80 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oscar Lopez - Development Portfolio</title>
+    <title>Oscar Lopez | Engineering Portfolio</title>
     <style>
-        body {
-            background-color: black;
-            color: white;
-            font-family: Arial, sans-serif;
-        }
-        a {
-            color: lightblue;
-            text-decoration: none;
-        }
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            max-width: 800px;
-            margin-bottom: 20px;
-        }
-        th, td {
-            border: 1px solid white;
-            padding: 10px;
-            text-align: left;
-        }
+        /* Base Styling */
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; background-color: #f4f5f7; }
+        
+        /* Dark Sidebar Styling */
+        .sidebar { width: 250px; background-color: #2b2b2b; color: white; height: 100vh; position: fixed; padding-top: 30px; }
+        .sidebar img { width: 120px; height: 120px; border-radius: 50%; display: block; margin: 0 auto 20px; border: 2px solid #555; }
+        .sidebar a { display: block; color: #ddd; padding: 15px 30px; text-decoration: none; font-size: 18px; font-weight: 500; transition: 0.3s; }
+        .sidebar a:hover { background-color: #444; color: white; border-left: 4px solid #007bff; padding-left: 26px; }
+        
+        /* Main Content Area */
+        .main-content { margin-left: 250px; padding: 50px; width: 100%; max-width: 900px; }
+        h1 { font-size: 42px; margin-bottom: 10px; color: #111; }
+        .subtitle { font-size: 18px; color: #666; margin-bottom: 40px; }
+        
+        /* Project Category Headers */
+        .domain-category { margin-top: 40px; margin-bottom: 20px; border-bottom: 2px solid #ccc; padding-bottom: 10px; color: #333; font-size: 24px; font-weight: bold; }
+        
+        /* Project Cards */
+        .card { background: white; padding: 25px; border: 1px solid #e0e0e0; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .card h4 { margin: 0 0 10px 0; font-size: 22px; color: #0056b3; }
+        .card p { color: #555; line-height: 1.6; }
+        .card a { display: inline-block; margin-top: 15px; background-color: #eee; padding: 10px 15px; border-radius: 5px; color: #333; text-decoration: none; font-weight: bold; font-size: 14px; transition: 0.2s; border: 1px solid #ccc; }
+        .card a:hover { background-color: #0056b3; color: white; border-color: #0056b3; }
     </style>
 </head>
 <body>
 
-    <h1>Oscar Lopez - Development Portfolio</h1>
-    <p>A collection of projects showcasing my expertise in software development, embedded systems, and mechanical design.</p>
+    <div class="sidebar">
+        <img src="assets/profile.jpg" alt="Oscar Lopez Profile">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+    </div>
 
-    <h2>Academic Coursework</h2>
-    <table>
-        <tr>
-            <th>Course Number</th>
-            <th>Course Name</th>
-        </tr>
-        <tr>
-            <td>CSC 2330</td>
-            <td><a href="Data-Structures-and-Programming-2/Data-Structures-and-Programming-2.html">Data Structures and Programming II</a></td>
-        </tr>
-        <tr>
-            <td>EE 3280</td>
-            <td><a href="Microcontroller-System-Design/Microcontroller-System-Design.html">Microcontroller System Design</a></td>
-        </tr>
-    </table>
+    <div class="main-content">
+        
+        <div id="projects" class="section">
+            <h1>Projects</h1>
+            <p class="subtitle">A collection of my work spanning hardware design, embedded systems, and software algorithms.</p>
 
-    <h2>Mechanical Design & CAD</h2>
-    <table>
-        <tr>
-            <th>Project Name</th>
-            <th>Description</th>
-            <th>View Project</th>
-        </tr>
-        <tr>
-            <td>CSWA Practice: Problem 1.1</td>
-            <td>Parametric modeling in SolidWorks 2024. (Mass: ~1245g, AISI 1020 Steel)</td>
-            <td>
-                <a href="https://github.com/oscar-lopez-02/oscar-dev-portafolio/blob/main/SOLIDWORKS-parts/Practice_Problem_1-1/Practice_Problem_1-1.STL" target="_blank" style="color: lightgreen; font-weight: bold;">
-                    ➤ View in 3D
-                </a>
-                <br>
-                <a href="https://github.com/oscar-lopez-02/oscar-dev-portafolio/tree/main/SOLIDWORKS-parts/Practice_Problem_1-1" target="_blank" style="color: lightblue; font-size: 14px;">
-                    📂 Source Files
-                </a>
-            </td>
-        </tr>
-    </table>
+            <div class="domain-category">Analog & Hardware Design</div>
+            
+            <div class="card">
+                <h4>25 kHz Active Bandpass Filter & Peak Detector</h4>
+                <p>Designed and built an 8th-order cascaded Sallen-Key bandpass filter. Implemented an envelope peak detector and LM339 comparator to successfully isolate a 25 kHz IR signal from 10 kHz and 17 kHz adjacent noise.</p>
+                <a href="Analog-and-Hardware/25kHz-Bandpass-Filter/index.html">View Technical Details &rarr;</a>
+            </div>
 
-    <h2>GitHub Repository</h2>
-    <p>All project files, documentation, and source code are available on GitHub:</p>
-    <p style="font-size: 20px; color: red; font-weight: bold;">
-        <a href="https://github.com/oscar-lopez-02/oscar-dev-portafolio" style="color: red; text-decoration: none;">
-            Access Repository
-        </a>
-    </p>
+            <div class="domain-category">Power & Energy Systems</div>
+            <div class="card">
+                <h4>Power Systems Analysis (Coming Soon)</h4>
+                <p>Projects encompassing Load Flow (Power Flow) Analysis and Fault Analysis.</p>
+            </div>
+
+            <div class="domain-category">Embedded Systems</div>
+            <div class="card">
+                <h4>Raspberry Pi Pico Servo Motor Controller</h4>
+                <p>Developed MicroPython control systems utilizing I2C LCDs and GPIO to manage precise servo motor actuation and timing.</p>
+                <a href="Embedded-Systems/Pico-Servo-Motor/index.html">View Project &rarr;</a>
+            </div>
+
+            <div class="domain-category">Software & Algorithms</div>
+            <div class="card">
+                <h4>C++ Data Structures</h4>
+                <p>Implementation of custom Hash Tables and Search Trees for optimized data retrieval and sorting.</p>
+                <a href="Software-and-Algorithms/Hash-Tables/index.html">View Repository &rarr;</a>
+            </div>
+
+            <div class="domain-category">Mechanical Design & CAD</div>
+            <div class="card">
+                <h4>SolidWorks Parametric Modeling</h4>
+                <p>CSWA practice problems focusing on parametric modeling, mass properties, and specific material assignments (AISI 1020 Steel).</p>
+                <a href="Mechanical-CAD/CSWA-Practice/index.html">View 3D Models &rarr;</a>
+            </div>
+
+        </div>
+    </div>
 
 </body>
 </html>

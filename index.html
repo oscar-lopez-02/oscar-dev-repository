@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oscar Lopez | Engineering Portfolio</title>
     <style>
+        /* Smooth scrolling for sidebar links */
+        html { scroll-behavior: smooth; }
+        
         /* Base Styling */
         body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; background-color: #f4f5f7; }
         
         /* Dark Sidebar Styling */
         .sidebar { width: 250px; background-color: #2b2b2b; color: white; height: 100vh; position: fixed; padding-top: 30px; }
-        .sidebar img { width: 120px; height: 120px; border-radius: 50%; display: block; margin: 0 auto 20px; border: 2px solid #555; }
+        .sidebar img { width: 120px; height: 120px; border-radius: 50%; display: block; margin: 0 auto 20px; border: 2px solid #555; object-fit: cover; }
         .sidebar a { display: block; color: #ddd; padding: 15px 30px; text-decoration: none; font-size: 18px; font-weight: 500; transition: 0.3s; }
         .sidebar a:hover { background-color: #444; color: white; border-left: 4px solid #007bff; padding-left: 26px; }
         
@@ -22,12 +25,12 @@
         /* Project Category Headers */
         .domain-category { margin-top: 40px; margin-bottom: 20px; border-bottom: 2px solid #ccc; padding-bottom: 10px; color: #333; font-size: 24px; font-weight: bold; }
         
-        /* Project Cards */
+        /* Project & Experience Cards */
         .card { background: white; padding: 25px; border: 1px solid #e0e0e0; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
         .card h4 { margin: 0 0 10px 0; font-size: 22px; color: #0056b3; }
         .card p { color: #555; line-height: 1.6; }
-        .card a { display: inline-block; margin-top: 15px; background-color: #eee; padding: 10px 15px; border-radius: 5px; color: #333; text-decoration: none; font-weight: bold; font-size: 14px; transition: 0.2s; border: 1px solid #ccc; }
-        .card a:hover { background-color: #0056b3; color: white; border-color: #0056b3; }
+        .card a.btn { display: inline-block; margin-top: 15px; background-color: #eee; padding: 10px 15px; border-radius: 5px; color: #333; text-decoration: none; font-weight: bold; font-size: 14px; transition: 0.2s; border: 1px solid #ccc; }
+        .card a.btn:hover { background-color: #0056b3; color: white; border-color: #0056b3; }
     </style>
 </head>
 <body>
@@ -40,6 +43,7 @@
     </div>
 
     <div class="main-content">
+        
         <div id="about" class="section" style="margin-bottom: 60px;">
             <h1>Oscar Lopez</h1>
             <p style="font-size: 20px; color: #0056b3; font-weight: 600; margin-top: -5px; margin-bottom: 25px;">
@@ -47,7 +51,7 @@
             </p>
             
             <div class="card" style="border-left: 4px solid #0056b3;">
-                <h2 style="margin-top: 0;">About Me</h2>
+                <h2 style="margin-top: 0; color: #2b2b2b;">About Me</h2>
                 <p>I am a Junior Electrical Engineering student at Seattle Pacific University with a minor in Computer Engineering. I recently transitioned to this major to focus on the intersection of hardware and physical systems, while maintaining a strong foundation in software and embedded logic.</p>
                 
                 <p>Before returning to university, I spent over four years in industrial operations and data analysis at Magna International, where I managed production budgets and optimized workflows. This professional background has given me a practical, results-oriented approach to engineering challenges.</p>
@@ -61,11 +65,10 @@
             <p class="subtitle">A collection of my work spanning hardware design, embedded systems, and software algorithms.</p>
 
             <div class="domain-category">Analog & Hardware Design</div>
-            
             <div class="card">
                 <h4>25 kHz Active Bandpass Filter (Frequency Detector)</h4>
                 <p>Designed and built an 8th-order cascaded Sallen-Key active filter for a team-based IR audio detection system. Successfully isolated a 25 kHz target frequency while achieving severe stopband attenuation for adjacent 10 kHz and 17 kHz signals.</p>
-                <a href="Analog-and-Hardware/25kHz-Bandpass-Filter/index.html">View Technical Details &rarr;</a>
+                <a href="Analog-and-Hardware/25kHz-Bandpass-Filter/index.html" class="btn">View Technical Details &rarr;</a>
             </div>
 
             <div class="domain-category">Power & Energy Systems</div>
@@ -78,24 +81,41 @@
             <div class="card">
                 <h4>Raspberry Pi Pico Servo Motor Controller</h4>
                 <p>Developed MicroPython control systems utilizing I2C LCDs and GPIO to manage precise servo motor actuation and timing.</p>
-                <a href="Embedded-Systems/Pico-Servo-Motor/index.html">View Project &rarr;</a>
+                <a href="Embedded-Systems/Pico-Servo-Motor/index.html" class="btn">View Project &rarr;</a>
             </div>
 
             <div class="domain-category">Software & Algorithms</div>
             <div class="card">
                 <h4>C++ Data Structures</h4>
                 <p>Implementation of custom Hash Tables and Search Trees for optimized data retrieval and sorting.</p>
-                <a href="Software-and-Algorithms/Hash-Tables/index.html">View Repository &rarr;</a>
+                <a href="Software-and-Algorithms/Hash-Tables/index.html" class="btn">View Repository &rarr;</a>
             </div>
 
             <div class="domain-category">Mechanical Design & CAD</div>
             <div class="card">
                 <h4>SolidWorks Parametric Modeling</h4>
                 <p>CSWA practice problems focusing on parametric modeling, mass properties, and specific material assignments (AISI 1020 Steel).</p>
-                <a href="Mechanical-CAD/CSWA-Practice/index.html">View 3D Models &rarr;</a>
+                <a href="Mechanical-CAD/CSWA-Practice/index.html" class="btn">View 3D Models &rarr;</a>
+            </div>
+        </div>
+
+        <div id="experience" class="section" style="margin-top: 60px;">
+            <h1>Experience</h1>
+            <p class="subtitle">Professional background in industrial operations and data analysis.</p>
+
+            <div class="card">
+                <h4 style="margin: 0; font-size: 20px;">Spare Parts and Tools Stockroom Supervisor</h4>
+                <p style="color: #0056b3; font-weight: bold; margin-top: 5px;">Magna International (Molding Engineering) | June 2015 – September 2016</p>
+                <p>Managed production budgets, optimized inventory workflows, and oversaw stockroom operations to ensure seamless industrial production.</p>
             </div>
 
+            <div class="card">
+                <h4 style="margin: 0; font-size: 20px;">Administrative Coordinator and Data Analyst</h4>
+                <p style="color: #0056b3; font-weight: bold; margin-top: 5px;">Magna International (Molding Engineering) | August 2012 – May 2015</p>
+                <p>Analyzed industrial operations data and coordinated administrative processes to improve departmental efficiency and workflow optimization.</p>
+            </div>
         </div>
+
     </div>
 
 </body>

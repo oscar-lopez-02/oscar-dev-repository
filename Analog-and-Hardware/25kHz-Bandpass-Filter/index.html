@@ -54,53 +54,53 @@
         <p class="subtitle">Hardware Design | Signal Processing | Op-Amp Circuitry</p>
 
         <div class="card">
-            <h2>Hardware Implementation</h2>
-            <p>To successfully isolate a 25 kHz target signal from adjacent 10 kHz and 17 kHz noise, I designed and built an 8th-order cascaded Sallen-Key bandpass filter. The system utilizes an envelope peak detector and an LM339 comparator to trigger a physical indicator when the target frequency is detected.</p>
+            <h2>System Overview</h2>
+            <p>To successfully isolate a 25 kHz target signal from adjacent 10 kHz and 17 kHz noise, I designed and built an 8th-order cascaded Sallen-Key bandpass filter. Below is a quick demonstration of the physical circuit rapidly identifying the target frequency and rejecting the noise.</p>
+            
+            <img src="gif_demo.gif" alt="Hardware demonstration GIF" class="full-image" style="max-height: 500px; object-fit: cover;">
+            <div class="image-caption" style="text-align: center;">Rapid switching demonstration targeting the 25 kHz frequency.</div>
+        </div>
+
+        <div class="card">
+            <h2>System Design & Simulation</h2>
+            <p>The active filter was constructed using four cascaded 2nd-order stages, designed with a center frequency (f<sub>0</sub>) of 25 kHz. The theoretical peak gain was verified via LTspice simulation before physical construction. The steep roll-off creates a massive 27.7 dB separation between the target signal and the 17 kHz noise.</p>
+            
+            <img src="images/LTspice_Schematic.jpg" alt="LTspice Schematic of 8th Order Filter" class="full-image">
+            <div class="image-caption" style="text-align: center; margin-bottom: 30px;">LTspice System Schematic: 8th-Order Sallen-Key, Peak Detector, and Comparator</div>
+
+            <img src="images/LTspice_Bode_Plot.jpg" alt="LTspice Bode Plot Stage-by-Stage" class="full-image">
+            <div class="image-caption" style="text-align: center;">LTspice Stage-by-Stage Frequency Response (Note the tightening of the passband across the 4 stages).</div>
+        </div>
+
+        <div class="card">
+            <h2>Hardware Verification</h2>
+            <p>The physical circuit successfully replicated the simulated frequency response. Frequency Response Analysis (FRA) confirmed a robust peak gain at 25 kHz, validating the mathematical model and component selection.</p>
             
             <div class="image-grid">
                 <div class="image-card">
                     <img src="images/Breadboard_Implementation.jpg" alt="Breadboard layout of the 8th-order filter">
-                    <div class="image-caption">Physical Circuit Implementation (Breadboard)</div>
+                    <div class="image-caption">Physical Circuit Implementation</div>
                 </div>
                 <div class="image-card">
-                    <img src="images/System_Response_25kHz.jpg" alt="Oscilloscope reading at 25kHz">
-                    <div class="image-caption">System Response: 25 kHz Target Signal (Peak detected, 14.3A Pk-Pk output)</div>
+                    <img src="images/FRA_Bode_Plot_25kHz.jpg" alt="Hardware Bode Plot at 25kHz">
+                    <div class="image-caption">Measured Hardware Response (FRA) centered at 25 kHz</div>
                 </div>
             </div>
         </div>
 
         <div class="card">
-            <h2>Live Demonstration</h2>
-            <p>This video demonstrates the physical circuit successfully illuminating the indicator LED only when the 25 kHz target frequency is applied, fully rejecting the adjacent 10 kHz and 17 kHz signals.</p>
+            <h2>Full Live Demonstration</h2>
+            <p>This extended video demonstrates the physical circuit successfully illuminating the indicator LED only when the 25 kHz target frequency is applied, fully rejecting the adjacent 10 kHz and 17 kHz signals across different test states.</p>
             
-            <video width="100%" controls style="border-radius: 6px; border: 1px solid #ddd;">
+            <video width="100%" controls style="border-radius: 6px; border: 1px solid #ddd; margin-top: 15px;">
                 <source src="video_demo.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
-        
-        <div class="card">
-            <h2>System Design & Simulation</h2>
-            <p>The active filter was constructed using four cascaded 2nd-order stages, designed with a center frequency ($f_0$) of 25 kHz. The theoretical peak gain of 8.34 dB was verified via LTspice simulation (8.69 dB) before physical construction. The steep roll-off creates a massive 27.7 dB separation between the target signal and the 17 kHz noise.</p>
-            
-            <img src="images/LTspice_Schematic.jpg" alt="LTspice Schematic of 8th Order Filter" class="full-image">
-            <div class="image-caption" style="text-align: center;">LTspice System Schematic: 8th-Order Sallen-Key, Peak Detector, and Comparator</div>
-
-            <div class="image-grid" style="margin-top: 30px;">
-                <div class="image-card">
-                    <img src="images/MATLAB_Bode_Plot.jpg" alt="MATLAB Bode Plot">
-                    <div class="image-caption">Theoretical Frequency Response (MATLAB)</div>
-                </div>
-                <div class="image-card">
-                    <img src="images/FRA_Bode_Plot_17kHz.jpg" alt="Hardware Bode Plot at 17kHz">
-                    <div class="image-caption">Measured Hardware Attenuation at 17 kHz (-15.45 dB)</div>
-                </div>
-            </div>
-        </div>
 
         <div class="card">
             <h2>Project Documentation & Source Files</h2>
-            <p>For a complete breakdown of the transfer functions, stage-by-stage gain calculations, and component selection, please review the final engineering report.</p>
+            <p>For a complete breakdown of the transfer functions, stage-by-stage gain calculations, and component selection (including standard resistor mapping like 424.4&Omega; to available values), please review the final engineering report.</p>
             
             <ul class="file-list">
                 <li><a href="Final_Project_Report.pdf" target="_blank">📄 Download Final PDF Report</a></li>

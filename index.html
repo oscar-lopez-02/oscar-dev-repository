@@ -19,6 +19,10 @@
         
         /* Main Content Area */
         .main-content { margin-left: 250px; padding: 50px; width: 100%; max-width: 900px; }
+        
+        /* Forces each section to take up most of the screen height */
+        .section { min-height: 85vh; padding-top: 20px; margin-bottom: 40px; }
+        
         h1 { font-size: 42px; margin-bottom: 10px; color: #111; }
         .subtitle { font-size: 18px; color: #666; margin-bottom: 40px; }
         
@@ -31,6 +35,10 @@
         .card p { color: #555; line-height: 1.6; }
         .card a.btn { display: inline-block; margin-top: 15px; background-color: #eee; padding: 10px 15px; border-radius: 5px; color: #333; text-decoration: none; font-weight: bold; font-size: 14px; transition: 0.2s; border: 1px solid #ccc; }
         .card a.btn:hover { background-color: #0056b3; color: white; border-color: #0056b3; }
+
+        /* Skills Grid */
+        .skills-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin-top: 15px; }
+        .skill-item { background-color: #f8f9fa; padding: 10px; border-radius: 5px; border: 1px solid #eee; text-align: center; font-weight: 500; color: #444; }
     </style>
 </head>
 <body>
@@ -44,7 +52,7 @@
 
     <div class="main-content">
         
-        <div id="about" class="section" style="margin-bottom: 60px;">
+        <div id="about" class="section">
             <h1>Oscar Lopez</h1>
             <p style="font-size: 20px; color: #0056b3; font-weight: 600; margin-top: -5px; margin-bottom: 25px;">
                 Engineering Student at Seattle Pacific University | B.S. Electrical Engineering & Computer Engineering Minor
@@ -57,6 +65,18 @@
                 <p>Before returning to university, I spent over four years in industrial operations and data analysis at Magna International, where I managed production budgets and optimized workflows. This professional background has given me a practical, results-oriented approach to engineering challenges.</p>
                 
                 <p>I am currently exploring opportunities in Electrical Engineering where I can apply both my technical coursework and my professional experience to solve real-world problems.</p>
+            </div>
+
+            <div class="card">
+                <h2 style="margin-top: 0; color: #2b2b2b;">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">Circuit Analysis & LTspice</div>
+                    <div class="skill-item">MATLAB</div>
+                    <div class="skill-item">C / C++</div>
+                    <div class="skill-item">MicroPython & Assembly</div>
+                    <div class="skill-item">SolidWorks (CAD)</div>
+                    <div class="skill-item">Data Structures</div>
+                </div>
             </div>
         </div>
         
@@ -99,7 +119,7 @@
             </div>
         </div>
 
-        <div id="experience" class="section" style="margin-top: 60px;">
+        <div id="experience" class="section">
             <h1>Experience</h1>
             <p class="subtitle">Professional background in industrial operations and data analysis.</p>
 

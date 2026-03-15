@@ -8,34 +8,35 @@
         html { scroll-behavior: smooth; }
         
         /* Base Styling */
-        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; background-color: #F7F9FC; }
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; background-color: #F5F5F5; }
         
-        /* THEME: Deep Navy Sidebar */
-        .sidebar { width: 250px; background-color: #0A2540; color: white; height: 100vh; position: fixed; padding-top: 30px; }
-        .sidebar img { width: 120px; height: 120px; border-radius: 50%; display: block; margin: 0 auto 20px; border: 2px solid #4A90E2; object-fit: cover; }
-        .sidebar a { display: block; color: #ddd; padding: 15px 30px; text-decoration: none; font-size: 18px; font-weight: 500; transition: 0.3s; }
-        .sidebar a:hover { background-color: #113b66; color: white; border-left: 4px solid #4A90E2; padding-left: 26px; }
+        /* MODERN HARDWARE & EMBEDDED THEME: Charcoal & Teal */
+        .sidebar { width: 250px; background-color: #1E1E1E; color: white; height: 100vh; position: fixed; padding-top: 30px; }
+        .sidebar img { width: 120px; height: 120px; border-radius: 50%; display: block; margin: 0 auto 20px; border: 2px solid #00A8B5; object-fit: cover; }
+        .sidebar a { display: block; color: #ccc; padding: 15px 30px; text-decoration: none; font-size: 18px; font-weight: 500; transition: 0.3s; }
+        .sidebar a:hover { background-color: #2D2D2D; color: white; border-left: 4px solid #00A8B5; padding-left: 26px; }
         
         /* Main Content Area */
         .main-content { margin-left: 250px; padding: 50px; width: 100%; max-width: 900px; }
         .section { min-height: 85vh; padding-top: 20px; margin-bottom: 40px; }
-        h1 { font-size: 42px; margin-bottom: 10px; color: #0A2540; }
+        h1 { font-size: 42px; margin-bottom: 10px; color: #1E1E1E; }
         .subtitle { font-size: 18px; color: #666; margin-bottom: 40px; }
         
         /* Headers */
-        .domain-category { margin-top: 40px; margin-bottom: 20px; border-bottom: 2px solid #ccc; padding-bottom: 10px; color: #0A2540; font-size: 24px; font-weight: bold; }
+        .domain-category { margin-top: 40px; margin-bottom: 20px; border-bottom: 2px solid #ddd; padding-bottom: 10px; color: #1E1E1E; font-size: 24px; font-weight: bold; }
         
         /* Cards & Buttons */
         .card { background: white; padding: 25px; border: 1px solid #e0e0e0; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .card h4 { margin: 0 0 10px 0; font-size: 22px; color: #4A90E2; }
+        .card h4 { margin: 0 0 10px 0; font-size: 22px; color: #00A8B5; }
         .card p { color: #555; line-height: 1.6; }
+        .card ul { color: #555; line-height: 1.6; padding-left: 20px; }
         .card a.btn { display: inline-block; margin-top: 15px; background-color: #eee; padding: 10px 15px; border-radius: 5px; color: #333; text-decoration: none; font-weight: bold; font-size: 14px; transition: 0.2s; border: 1px solid #ccc; }
-        .card a.btn:hover { background-color: #4A90E2; color: white; border-color: #4A90E2; }
+        .card a.btn:hover { background-color: #00A8B5; color: white; border-color: #00A8B5; }
 
         /* Skills List */
         .skills-list { padding-left: 20px; color: #555; line-height: 1.8; }
         .skills-list li { margin-bottom: 12px; }
-        .skills-list strong { color: #0A2540; }
+        .skills-list strong { color: #1E1E1E; }
     </style>
 </head>
 <body>
@@ -51,19 +52,19 @@
         
         <div id="about" class="section">
             <h1>Oscar Lopez</h1>
-            <p style="font-size: 20px; color: #4A90E2; font-weight: 600; margin-top: -5px; margin-bottom: 25px;">
+            <p style="font-size: 20px; color: #00A8B5; font-weight: 600; margin-top: -5px; margin-bottom: 25px;">
                 Engineering Student at Seattle Pacific University | B.S. Electrical Engineering & Computer Engineering Minor
             </p>
             
-            <div class="card" style="border-left: 4px solid #4A90E2;">
-                <h2 style="margin-top: 0; color: #0A2540;">About Me</h2>
-                <p>I am a Junior Electrical Engineering student at Seattle Pacific University with a minor in Computer Engineering. I recently transitioned to this major to focus on the intersection of hardware and physical systems, while maintaining a strong foundation in software and embedded logic.</p>
-                <p>Before returning to university, I spent over four years in industrial operations and data analysis at Magna International, where I managed production budgets and optimized workflows. This professional background has given me a practical, results-oriented approach to engineering challenges.</p>
-                <p>I am currently exploring opportunities in Electrical Engineering where I can apply both my technical coursework and my professional experience to solve real-world problems.</p>
+            <div class="card" style="border-left: 4px solid #00A8B5;">
+                <h2 style="margin-top: 0; color: #1E1E1E;">About Me</h2>
+                <p>I am a Junior Electrical Engineering student with a minor in Computer Engineering. As a "tactile" learner, I pivoted to Electrical Engineering because I didn't just want to write the code that runs on a screen—I wanted to build the physical systems that the code controls. I am deeply passionate about <strong>Embedded Systems</strong>: the critical brain bridging software logic and the physical world.</p>
+                <p>My engineering philosophy is rooted in hands-on application, demonstrated by projects like an automated, RFID-secured medication dispenser built with a Raspberry Pi Pico. My goal is to apply this versatile skillset to design "smart hardware" that improves human safety and efficiency, particularly in medical devices, aerospace, or industrial automation.</p>
+                <p>Before returning to university, I built a strong foundation in industrial operations, electromechanical maintenance, and data analysis. Whether operating automated HMI systems or managing $2M production budgets, this background has given me a practical, results-oriented approach to complex engineering challenges.</p>
             </div>
 
             <div class="card">
-                <h2 style="margin-top: 0; color: #0A2540;">Technical Skills</h2>
+                <h2 style="margin-top: 0; color: #1E1E1E;">Technical Skills</h2>
                 <ul class="skills-list">
                     <li><strong>Hardware & Electronics:</strong> Circuit Analysis (AC/DC), KCL/KVL, Op-Amps, Digital Logic Design, Microcontrollers (Raspberry Pi, Arduino), I2C Protocols.</li>
                     <li><strong>Software & Programming:</strong> C++, Python, Java, MIPS Assembly, Data Structures, Algorithms, LTspice, PSCAD, MATLAB, SolidWorks.</li>
@@ -114,19 +115,47 @@
 
         <div id="experience" class="section">
             <h1>Experience</h1>
-            <p class="subtitle">Professional background in industrial operations and data analysis.</p>
+            <p class="subtitle">Professional background in industrial operations, maintenance, and logistics.</p>
 
             <div class="card">
-                <h4 style="margin: 0; font-size: 20px;">Spare Parts and Tools Stockroom Supervisor</h4>
-                <p style="color: #4A90E2; font-weight: bold; margin-top: 5px;">Magna International (Molding Engineering) | June 2015 – September 2016</p>
-                <p>Managed production budgets, optimized inventory workflows, and oversaw stockroom operations to ensure seamless industrial production.</p>
+                <h4 style="margin: 0; font-size: 20px;">Meat Clerk</h4>
+                <p style="color: #00A8B5; font-weight: bold; margin-top: 5px; margin-bottom: 10px;">Kroger | Auburn, AL | March 2020 – January 2023</p>
+                <ul style="margin-top: 0;">
+                    <li><strong>Logistics & Inventory:</strong> Processed departmental shipments and managed stock levels using FIFO procedures to minimize waste. Organized cold storage and managed heavy unloading operations.</li>
+                    <li><strong>Operations & Service:</strong> Operated full-service counters maintaining strict sanitation standards and compliance with food safety protocols.</li>
+                </ul>
             </div>
 
             <div class="card">
-                <h4 style="margin: 0; font-size: 20px;">Administrative Coordinator and Data Analyst</h4>
-                <p style="color: #4A90E2; font-weight: bold; margin-top: 5px;">Magna International (Molding Engineering) | August 2012 – May 2015</p>
-                <p>Analyzed industrial operations data and coordinated administrative processes to improve departmental efficiency and workflow optimization.</p>
+                <h4 style="margin: 0; font-size: 20px;">Sanitation & Maintenance Technician</h4>
+                <p style="color: #00A8B5; font-weight: bold; margin-top: 5px; margin-bottom: 10px;">Ventura Foods | Portland, OR | August 2018 – July 2019</p>
+                <ul style="margin-top: 0;">
+                    <li><strong>Automated Systems:</strong> Operated and monitored automated Clean-in-Place (CIP) systems via HMI touch panels to ensure production line sanitation standards.</li>
+                    <li><strong>Equipment Maintenance:</strong> Performed mechanical and electrical disassembly/reassembly of industrial pumps, pipelines, and processing machinery for scheduled maintenance.</li>
+                    <li><strong>Safety Protocols:</strong> Managed safe material transport using forklifts and handled industrial chemicals in strict compliance with safety regulations.</li>
+                </ul>
             </div>
+
+            <div class="card">
+                <h4 style="margin: 0; font-size: 20px;">Stockroom Supervisor</h4>
+                <p style="color: #00A8B5; font-weight: bold; margin-top: 5px; margin-bottom: 10px;">Magna International (Molding) | Mexico City, MX | June 2015 – September 2016</p>
+                <ul style="margin-top: 0;">
+                    <li>Generated weekly reports on consumption and expenses by department.</li>
+                    <li>Managed inventory budgets and identified obsolete materials to achieve significant cost reductions.</li>
+                    <li>Supplied critical spare parts, hardware, tools, and personal protective equipment for the engineering and production teams.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h4 style="margin: 0; font-size: 20px;">Administrative Coordinator & Data Analyst</h4>
+                <p style="color: #00A8B5; font-weight: bold; margin-top: 5px; margin-bottom: 10px;">Magna International (Molding) | Mexico City, MX | August 2012 – May 2015</p>
+                <ul style="margin-top: 0;">
+                    <li><strong>Data Analysis:</strong> Managed production databases and generated key performance reports to support manufacturing operations.</li>
+                    <li><strong>Budgeting & Procurement:</strong> Executed purchasing for the Molding production area, managing an annual budget of $2 Million USD.</li>
+                    <li>Quoted and purchased indirect materials including tools, equipment, metalworking supplies, and industrial consumables.</li>
+                </ul>
+            </div>
+            
         </div>
 
     </div>

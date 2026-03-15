@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>25 kHz Bandpass Filter | Oscar Lopez</title>
+    <title>25 kHz Active Bandpass Filter | Oscar Lopez</title>
     <style>
         /* Base Styling to match your main portfolio */
         body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f5f7; color: #333; line-height: 1.6; }
@@ -50,12 +50,12 @@
         
         <a href="../../index.html" class="back-link">&larr; Back to Main Portfolio</a>
 
-        <h1>25 kHz Active Bandpass Filter & Peak Detector</h1>
-        <p class="subtitle">Hardware Design | Signal Processing | Op-Amp Circuitry</p>
+        <h1>25 kHz Active Bandpass Filter</h1>
+        <p class="subtitle">Active Filter Design | Op-Amp Circuitry | Signal Processing</p>
 
         <div class="card">
             <h2>System Overview</h2>
-            <p>To successfully isolate a 25 kHz target signal from adjacent 10 kHz and 17 kHz noise, I designed and built an 8th-order cascaded Sallen-Key bandpass filter. Below is a quick demonstration of the physical circuit rapidly identifying the target frequency and rejecting the noise.</p>
+            <p>As part of a team-based Frequency Detector project, I was responsible for designing a module to isolate a 25 kHz audio signal modulated over an IR transmission. I designed and built an 8th-order cascaded Sallen-Key active bandpass filter (utilizing fixed 15 nF capacitors) to strictly pass the 25 kHz signal while heavily attenuating adjacent 10 kHz and 17 kHz signals. A secondary peak detector and comparator stage were added to trigger a physical LED indicator.</p>
             
             <img src="gif_demo.gif" alt="Hardware demonstration GIF" class="full-image" style="max-height: 500px; object-fit: cover;">
             <div class="image-caption" style="text-align: center;">Rapid switching demonstration targeting the 25 kHz frequency.</div>

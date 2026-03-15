@@ -1,29 +1,31 @@
-# Oscar Lopez - Engineering Repository
+# Oscar Lopez - Engineering Portfolio Repository
 
-Repository housing my ongoing coursework and lab projects in Microcontrollers, Data Structures, and SolidWorks design.
+This repository houses the source code, circuit schematics, CAD files, and technical documentation for my engineering projects. The projects span across hardware design, embedded systems, software algorithms, and mechanical modeling.
 
-Microcontrollers: Python/C code for RP2040 and embedded I/O.
+## 🌐 Live Web Portfolio
+**Visit the interactive project showcase here:** [oscar-lopez-02.github.io/oscar-dev-repository](https://oscar-lopez-02.github.io/oscar-dev-repository)
 
-Algorithms: C++ implementations of Hash Tables and Search Trees.
+---
 
-CAD: SolidWorks part files for engineering practice.
+## 📁 Repository Directory
 
-Status: Active Development (Updated Jan 2026)
+### ⚡ Analog & Hardware Design
+* **[25 kHz Active Bandpass Filter](./Analog-and-Hardware/25kHz-Bandpass-Filter)**
+  * **Contents:** LTspice `.asc` schematics, MATLAB `.m` filter calculations, PDF engineering report, and hardware verification data (FRA).
+  * **Description:** An 8th-order cascaded Sallen-Key active filter, envelope peak detector, and comparator designed to strictly isolate a 25 kHz target frequency while attenuating adjacent 10 kHz and 17 kHz noise.
 
+### 📟 Embedded Systems
+* **[Raspberry Pi Pico Servo Motor Controller](./Microcontroller-System-Design)** * **Contents:** MicroPython (`.py`) scripts, I2C driver code, and Wokwi circuit diagrams.
+  * **Description:** Embedded control system utilizing I2C LCDs and GPIO to manage precise servo motor actuation and timing.
 
-## Live Demo GitHub Pages Site
-Visit my site here: [oscar-lopez-02.github.io/oscar-dev-repository](https://oscar-lopez-02.github.io/oscar-dev-repository)
+### 💻 Software & Algorithms
+* **[C++ Data Structures](./Data-Structures-and-Programming-2)** * **Contents:** `C++` source code and header files.
+  * **Description:** Custom implementations of Hash Tables and Search Trees for optimized data retrieval and sorting.
 
-## Courses
+### ⚙️ Mechanical Design & CAD
+* **[SolidWorks Parametric Modeling](./SOLIDWORKS-parts/Practice_Problems)**
+  * **Contents:** SolidWorks part files (`.sldprt`).
+  * **Description:** CSWA practice problems focusing on parametric modeling, mass properties, and specific material assignments (AISI 1020 Steel).
 
-| Course Number | Course Name |
-|--------------|-------------|
-| CSC 2330 | [Data Structures and Programming II](https://oscar-lopez-02.github.io/oscar-dev-repository/Data-Structures-and-Programming-2/Data-Structures-and-Programming-2.html) |
-| EE 3280 | [Microcontroller System Design](https://oscar-lopez-02.github.io/oscar-dev-repository/Microcontroller-System-Design/Microcontroller-System-Design.html) |
-
-## 📂 Projects
-Files are available in my GitHub repository:
-
-- **Microcontroller System Design** [View Here](Microcontroller-System-Design/)
-- **Data Structures & Programming II** [View Here](Data-Structures-and-Programming-2/)
-- **Mechanical Design (SolidWorks)** [View Here](SOLIDWORKS-parts/)
+---
+**Status:** Active Development (Updated March 2026)

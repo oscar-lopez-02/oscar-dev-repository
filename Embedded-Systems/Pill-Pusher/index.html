@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pill Pusher | Oscar Lopez</title>
+    <style>
+        /* Modern Hardware Theme: Charcoal & Teal */
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #F5F5F5; color: #333; line-height: 1.6; }
+        .project-container { max-width: 1000px; margin: 40px auto; padding: 20px; }
+        
+        /* Navigation */
+        .back-link { display: inline-block; margin-bottom: 20px; color: #00A8B5; text-decoration: none; font-weight: bold; font-size: 16px; transition: 0.2s; }
+        .back-link:hover { color: #1E1E1E; text-decoration: underline; }
+
+        /* Typography */
+        h1 { font-size: 38px; margin-bottom: 5px; color: #1E1E1E; }
+        h2 { border-bottom: 2px solid #ddd; padding-bottom: 8px; margin-top: 40px; color: #1E1E1E; }
+        .subtitle { font-size: 18px; color: #666; margin-bottom: 30px; font-weight: 500; }
+
+        /* Content Cards */
+        .card { background: white; padding: 30px; border-radius: 8px; border: 1px solid #e0e0e0; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 30px; }
+        
+        /* Image & Video Grids */
+        .image-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin-top: 20px; }
+        @media (max-width: 768px) { .image-grid { grid-template-columns: 1fr; } }
+        .image-card { text-align: center; }
+        .image-card img { width: 100%; height: 250px; object-fit: cover; border-radius: 6px; border: 1px solid #ddd; }
+        .image-caption { font-size: 14px; color: #555; margin-top: 8px; font-style: italic; }
+        .full-media { width: 100%; border-radius: 6px; border: 1px solid #ddd; margin-top: 15px; max-height: 600px; object-fit: contain; background: #000; }
+
+        /* Code/File Links */
+        .file-list { list-style: none; padding: 0; }
+        .file-list li { margin-bottom: 15px; }
+        .file-list a { display: inline-block; background-color: #eee; padding: 12px 20px; border-radius: 5px; color: #333; text-decoration: none; font-weight: bold; font-size: 15px; border: 1px solid #ccc; transition: 0.2s; min-width: 250px; text-align: center; }
+        .file-list a:hover { background-color: #00A8B5; color: white; border-color: #00A8B5; }
+        .wokwi-btn { background-color: #1E1E1E !important; color: white !important; border-color: #1E1E1E !important; }
+        .wokwi-btn:hover { background-color: #00A8B5 !important; border-color: #00A8B5 !important; }
+    </style>
+</head>
+<body>
+
+    <div class="project-container">
+        
+        <a href="../../index.html" class="back-link">&larr; Back to Main Portfolio</a>
+
+        <h1>Pill Pusher: Automated RFID Medication Dispenser</h1>
+        <p class="subtitle">Embedded Systems | MicroPython | I2C & SPI Interfacing | Hardware Design</p>
+
+        <div class="card">
+            <h2>System Demonstration</h2>
+            <p>Missed or double-dosed medication can lead to serious health complications, and existing automated dispensers are often prohibitively expensive. Leading a team for my Microcontroller System Design course, I developed the <strong>Pill Pusher</strong>: a secure, automated dispensary system running on a Raspberry Pi Pico.</p>
+            
+            <video class="full-media" controls>
+                <source src="final_product_vertical.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="image-caption" style="text-align: center;">Live demonstration showing the timer expiration, visual/audio alerts, and secure RFID dispensing sequence.</div>
+        </div>
+
+        <div class="card">
+            <h2>Hardware Implementation</h2>
+            <p>The system utilizes a secure timer lock. The user inputs their dosage schedule via GPIO push buttons, tracked via an I2C SSD1306 OLED display. Upon timer expiration, an active buzzer and multi-threaded LED alert the user. To prevent accidental overdoses, the SG90 servo motor will <strong>only</strong> actuate the mechanical dispensary if the correct patient ID is verified via the SPI RC522 RFID scanner.</p>
+            
+            <div class="image-grid">
+                <div class="image-card">
+                    <img src="front_view_LCD_Buzzer_LED.jpg" alt="Front View">
+                    <div class="image-caption">Front Panel: OLED, Buzzer, & LED Alerts</div>
+                </div>
+                <div class="image-card">
+                    <img src="top_view_pill_entrance.jpg" alt="Top View">
+                    <div class="image-caption">Top View: Pill Hopper & RFID Scanner</div>
+                </div>
+                <div class="image-card">
+                    <img src="side_view.jpg" alt="Side View">
+                    <div class="image-caption">Side View: SG90 Servo Actuation Mechanism</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Software Architecture: Modular MicroPython</h2>
+            <p>Rather than writing a monolithic script, I engineered a highly modular, object-oriented firmware architecture. Hardware drivers (like <code>mfrc522.py</code>) were strictly separated from custom abstraction layers.</p>
+            <ul style="color: #555; line-height: 1.8;">
+                <li><strong>State Machine (<code>main.py</code>):</strong> Orchestrates the primary logic loop, handling the transition from "Timer" to "Alarm" to "Dispense" based on peripheral callbacks.</li>
+                <li><strong>Asynchronous Hardware (<code>pled.py</code>):</strong> Utilized the MicroPython <code>_thread</code> library to run the LED blinking sequence on a separate core, preventing the <code>sleep()</code> functions from blocking the main RFID scanning loop.</li>
+                <li><strong>Custom Graphics (<code>pdisplay.py</code>):</strong> Wrote custom frame-buffer logic to render a dynamic "Radial Wipe" animation on the OLED during the 5-second active scanning window.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Project Files & Documentation</h2>
+            <p>You can interact with a digital twin of the hardware logic via the Wokwi simulation link below, or review the comprehensive final presentations detailing the hardware block diagrams and system specifications.</p>
+            
+            <ul class="file-list">
+                <li><a href="https://wokwi.com/projects/459046241974443009" target="_blank" class="wokwi-btn">▶ Run Live Wokwi Simulation</a></li>
+                <li><a href="final_presentation.pdf" target="_blank">📄 View Final Presentation Slide Deck</a></li>
+                <li><a href="team_project_summary.pdf" target="_blank">📄 View System Requirements Report</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>

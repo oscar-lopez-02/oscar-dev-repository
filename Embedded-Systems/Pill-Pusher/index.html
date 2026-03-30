@@ -26,13 +26,12 @@
         @media (max-width: 768px) { .image-grid { grid-template-columns: 1fr; } }
         .image-card { text-align: center; }
         
-        /* Updated Image CSS so it doesn't crop your photos */
+        /* Hardware Images CSS */
         .image-card img { width: 100%; height: 300px; object-fit: contain; background-color: #fff; border-radius: 6px; border: 1px solid #ddd; padding: 5px; box-sizing: border-box; }
         .image-caption { font-size: 14px; color: #555; margin-top: 8px; font-style: italic; }
         
-        /* Updated Vertical Video CSS */
-        .video-wrapper { background: #111; border-radius: 6px; border: 1px solid #ddd; padding: 15px; text-align: center; margin-top: 15px; }
-        .vertical-video { height: 600px; width: auto; max-width: 100%; border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); }
+        /* YouTube Embed Wrapper */
+        .video-wrapper { background: #111; border-radius: 6px; border: 1px solid #ddd; padding: 20px; text-align: center; margin-top: 15px; }
 
         /* Code/File Links */
         .file-list { list-style: none; padding: 0; }
@@ -54,20 +53,17 @@
 
         <div class="card">
             <h2>System Demonstration</h2>
-            <p>Missed or double-dosed medication can lead to serious health complications, and existing automated dispensers are often prohibitively expensive. Leading a team for my Microcontroller System Design course, I developed the <strong>Pill Pusher</strong>: a secure, automated dispensary system running on a Raspberry Pi Pico.</p>
+            <p>Missed or double-dosed medication can lead to serious health complications, and existing automated dispensers are often prohibitively expensive. For our <strong>EE 3280: Microcontroller System Design</strong> course, my team and I developed the <strong>Pill Pusher</strong>: a secure, automated dispensary system running on a Raspberry Pi Pico.</p>
             
             <div class="video-wrapper">
-                <video class="vertical-video" controls playsinline>
-                    <source src="final_product_vertical.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <iframe width="315" height="560" src="https://www.youtube.com/embed/-KRfOe-QXaM" title="Pill Pusher Live Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius: 8px; max-width: 100%; box-shadow: 0 4px 10px rgba(0,0,0,0.5);"></iframe>
             </div>
             <div class="image-caption" style="text-align: center;">Live demonstration showing the timer expiration, visual/audio alerts, and secure RFID dispensing sequence.</div>
         </div>
 
         <div class="card">
             <h2>Hardware Implementation</h2>
-            <p>The system utilizes a secure timer lock. The user inputs their dosage schedule via GPIO push buttons, tracked via an I2C SSD1306 OLED display. Upon timer expiration, an active buzzer and multi-threaded LED alert the user. To prevent accidental overdoses, the SG90 servo motor will <strong>only</strong> actuate the mechanical dispensary if the correct patient ID is verified via the SPI RC522 RFID scanner.</p>
+            <p>Our team designed a system that utilizes a secure timer lock. The user inputs their dosage schedule via GPIO push buttons, tracked via an I2C SSD1306 OLED display. Upon timer expiration, an active buzzer and multi-threaded LED alert the user. To prevent accidental overdoses, the SG90 servo motor will <strong>only</strong> actuate the mechanical dispensary if the correct patient ID is verified via the SPI RC522 RFID scanner.</p>
             
             <div class="image-grid">
                 <div class="image-card">
@@ -87,7 +83,7 @@
 
         <div class="card">
             <h2>Software Architecture: Modular MicroPython</h2>
-            <p>Rather than writing a monolithic script, I engineered a highly modular, object-oriented firmware architecture. Hardware drivers (like <code>mfrc522.py</code>) were strictly separated from custom abstraction layers.</p>
+            <p>As my primary technical contribution to the team, I engineered a highly modular, object-oriented firmware architecture. Rather than writing a monolithic script, I ensured hardware drivers (like <code>mfrc522.py</code>) were strictly separated from custom abstraction layers.</p>
             <ul style="color: #555; line-height: 1.8;">
                 <li><strong>State Machine (<code>main.py</code>):</strong> Orchestrates the primary logic loop, handling the transition from "Timer" to "Alarm" to "Dispense" based on peripheral callbacks.</li>
                 <li><strong>Asynchronous Hardware (<code>pled.py</code>):</strong> Utilized the MicroPython <code>_thread</code> library to run the LED blinking sequence on a separate core, preventing the <code>sleep()</code> functions from blocking the main RFID scanning loop.</li>

@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pill Pusher | Oscar Lopez</title>
     <style>
-        /* Modern Hardware Theme: Charcoal & Teal */
-        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #F5F5F5; color: #333; line-height: 1.6; }
+        /* SPU Official Theme: Warm Black, Legacy Maroon, Historic Gold, Seattle Gray */
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #E5E5E0; color: #333; line-height: 1.6; }
         .project-container { max-width: 1000px; margin: 40px auto; padding: 20px; }
         
         /* Navigation */
-        .back-link { display: inline-block; margin-bottom: 20px; color: #00A8B5; text-decoration: none; font-weight: bold; font-size: 16px; transition: 0.2s; }
-        .back-link:hover { color: #1E1E1E; text-decoration: underline; }
+        .back-link { display: inline-block; margin-bottom: 20px; color: #651D32; text-decoration: none; font-weight: bold; font-size: 16px; transition: 0.2s; }
+        .back-link:hover { color: #3E2B2E; text-decoration: underline; }
 
         /* Typography */
-        h1 { font-size: 38px; margin-bottom: 5px; color: #1E1E1E; }
-        h2 { border-bottom: 2px solid #ddd; padding-bottom: 8px; margin-top: 40px; color: #1E1E1E; }
-        .subtitle { font-size: 18px; color: #666; margin-bottom: 30px; font-weight: 500; }
+        h1 { font-size: 38px; margin-bottom: 5px; color: #3E2B2E; }
+        h2 { border-bottom: 2px solid #C7AF7F; padding-bottom: 8px; margin-top: 40px; color: #651D32; }
+        .subtitle { font-size: 18px; color: #555; margin-bottom: 30px; font-weight: 500; }
 
         /* Content Cards */
         .card { background: white; padding: 30px; border-radius: 8px; border: 1px solid #e0e0e0; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 30px; }
@@ -37,9 +37,9 @@
         .file-list { list-style: none; padding: 0; }
         .file-list li { margin-bottom: 15px; }
         .file-list a { display: inline-block; background-color: #eee; padding: 12px 20px; border-radius: 5px; color: #333; text-decoration: none; font-weight: bold; font-size: 15px; border: 1px solid #ccc; transition: 0.2s; min-width: 250px; text-align: center; }
-        .file-list a:hover { background-color: #00A8B5; color: white; border-color: #00A8B5; }
-        .wokwi-btn { background-color: #1E1E1E !important; color: white !important; border-color: #1E1E1E !important; }
-        .wokwi-btn:hover { background-color: #00A8B5 !important; border-color: #00A8B5 !important; }
+        .file-list a:hover { background-color: #651D32; color: white; border-color: #651D32; }
+        .wokwi-btn { background-color: #3E2B2E !important; color: white !important; border-color: #3E2B2E !important; }
+        .wokwi-btn:hover { background-color: #651D32 !important; border-color: #651D32 !important; }
     </style>
 </head>
 <body>
@@ -82,12 +82,12 @@
         </div>
 
         <div class="card">
-            <h2>Software Architecture: Modular MicroPython</h2>
-            <p>As my primary technical contribution to the team, I engineered a highly modular, object-oriented firmware architecture. Rather than writing a monolithic script, I ensured hardware drivers (like <code>mfrc522.py</code>) were strictly separated from custom abstraction layers.</p>
+            <h2>Software Architecture & Team Integration</h2>
+            <p>I originally pitched the core concept for the Pill Pusher. To build it, our team adopted a modular approach to firmware development. Each team member was responsible for programming the driver, header, and test files for their assigned hardware component before we integrated them into the final system.</p>
             <ul style="color: #555; line-height: 1.8;">
-                <li><strong>State Machine (<code>main.py</code>):</strong> Orchestrates the primary logic loop, handling the transition from "Timer" to "Alarm" to "Dispense" based on peripheral callbacks.</li>
-                <li><strong>Asynchronous Hardware (<code>pled.py</code>):</strong> Utilized the MicroPython <code>_thread</code> library to run the LED blinking sequence on a separate core, preventing the <code>sleep()</code> functions from blocking the main RFID scanning loop.</li>
-                <li><strong>Custom Graphics (<code>pdisplay.py</code>):</strong> Wrote custom frame-buffer logic to render a dynamic "Radial Wipe" animation on the OLED during the 5-second active scanning window.</li>
+                <li><strong>OLED Display Interface (My Primary Role):</strong> I developed the custom logic and frame-buffer rendering for the I2C SSD1306 display, integrating user inputs and creating dynamic animations during the active scanning window.</li>
+                <li><strong>State Machine Integration:</strong> As a team, we orchestrated the primary logic loop in <code>main.py</code>, handling the transition from "Timer" to "Alarm" to "Dispense" based on peripheral callbacks.</li>
+                <li><strong>Asynchronous Hardware:</strong> We utilized the MicroPython <code>_thread</code> library to run the LED blinking sequence on a separate core, preventing blocking functions from interrupting the RFID scanning loop.</li>
             </ul>
         </div>
 

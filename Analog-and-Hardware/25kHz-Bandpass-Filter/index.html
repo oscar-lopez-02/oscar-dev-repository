@@ -5,23 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>25 kHz Active Bandpass Filter | Oscar Lopez</title>
     <style>
-        /* Base Styling to match your main portfolio */
-        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f5f7; color: #333; line-height: 1.6; }
+        /* Base Styling to match your main SPU-themed portfolio */
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #E5E5E0; color: #333; line-height: 1.6; }
         
         /* Container for the centered project layout */
         .project-container { max-width: 1000px; margin: 40px auto; padding: 20px; }
         
         /* Back Button */
-        .back-link { display: inline-block; margin-bottom: 20px; color: #4A90E2; text-decoration: none; font-weight: bold; font-size: 16px; transition: 0.2s; }
-        .back-link:hover { color: #0A2540; text-decoration: underline; }
+        .back-link { display: inline-block; margin-bottom: 20px; color: #651D32; text-decoration: none; font-weight: bold; font-size: 16px; transition: 0.2s; }
+        .back-link:hover { color: #3E2B2E; text-decoration: underline; }
 
         /* Typography */
-        h1 { font-size: 38px; margin-bottom: 5px; color: #0A2540; }
-        h2 { border-bottom: 2px solid #ccc; padding-bottom: 8px; margin-top: 40px; color: #0A2540; }
+        h1 { font-size: 38px; margin-bottom: 5px; color: #3E2B2E; } /* SPU Warm Black */
+        h2 { border-bottom: 2px solid #C7AF7F; padding-bottom: 8px; margin-top: 40px; color: #651D32; } /* SPU Historic Gold and Legacy Maroon */
         
-        /* File Downloads List */
-        .file-list a:hover { background-color: #4A90E2; color: white; border-color: #4A90E2; }
-
         /* Content Cards */
         .card { background: white; padding: 30px; border-radius: 8px; border: 1px solid #e0e0e0; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 30px; }
         
@@ -38,7 +35,7 @@
         .file-list { list-style: none; padding: 0; }
         .file-list li { margin-bottom: 15px; }
         .file-list a { display: inline-block; background-color: #eee; padding: 12px 20px; border-radius: 5px; color: #333; text-decoration: none; font-weight: bold; font-size: 15px; border: 1px solid #ccc; transition: 0.2s; width: 300px; text-align: center; }
-        .file-list a:hover { background-color: #0056b3; color: white; border-color: #0056b3; }
+        .file-list a:hover { background-color: #651D32; color: white; border-color: #651D32; } /* SPU Legacy Maroon */
         
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
@@ -57,7 +54,8 @@
 
         <div class="card">
             <h2>System Overview</h2>
-            <p>As part of a team-based Frequency Detector project, I was responsible for designing a module to isolate a 25 kHz audio signal modulated over an IR transmission. I designed and built an 8th-order cascaded Sallen-Key active bandpass filter (utilizing fixed 15 nF capacitors) to strictly pass the 25 kHz signal while heavily attenuating adjacent 10 kHz and 17 kHz signals. A secondary peak detector and comparator stage were added to trigger a physical LED indicator.</p>
+            <p>As part of a 3-person team project to build a multi-frequency IR audio detector, we divided the system architecture so that each engineer was exclusively responsible for a specific frequency channel. My teammates designed the 10 kHz and 17 kHz modules, while I took full ownership of the 25 kHz channel.</p>
+            <p>For my module, I independently designed and built an 8th-order cascaded Sallen-Key active bandpass filter (utilizing fixed 15 nF capacitors) to strictly pass my 25 kHz target signal. The circuit was specifically engineered to achieve massive stopband attenuation to successfully reject my teammates' adjacent signals. A secondary peak detector and comparator stage were added to trigger a physical LED indicator.</p>
             
             <img src="gif_demo.gif" alt="Hardware demonstration GIF" class="full-image" style="max-height: 500px; object-fit: cover;">
             <div class="image-caption" style="text-align: center;">Rapid switching demonstration targeting the 25 kHz frequency.</div>
@@ -92,7 +90,7 @@
 
         <div class="card">
             <h2>Full Live Demonstration</h2>
-            <p>This extended video demonstrates the physical circuit successfully illuminating the indicator LED only when the 25 kHz target frequency is applied, fully rejecting the adjacent 10 kHz and 17 kHz signals across different test states.</p>
+            <p>This extended video demonstrates my physical circuit successfully illuminating the indicator LED only when the 25 kHz target frequency is applied, fully rejecting the adjacent 10 kHz and 17 kHz signals across different test states.</p>
             
             <video width="100%" controls style="border-radius: 6px; border: 1px solid #ddd; margin-top: 15px;">
                 <source src="video_demo.mp4" type="video/mp4">

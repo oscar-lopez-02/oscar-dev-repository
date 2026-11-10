@@ -9,30 +9,30 @@
         html { scroll-behavior: smooth; }
         
         /* Base Styling */
-        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; background-color: #F5F5F5; }
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; background-color: #E5E5E0; } /* SPU Seattle Gray */
         
-        /* MODERN HARDWARE & EMBEDDED THEME: Charcoal & Teal */
-        .sidebar { width: 250px; background-color: #1E1E1E; color: white; height: 100vh; position: fixed; padding-top: 30px; }
-        .sidebar img { width: 120px; height: 120px; border-radius: 50%; display: block; margin: 0 auto 20px; border: 2px solid #00A8B5; object-fit: cover; }
+        /* MODERN HARDWARE & EMBEDDED THEME: SPU Official Palette */
+        .sidebar { width: 250px; background-color: #3E2B2E; color: white; height: 100vh; position: fixed; padding-top: 30px; } /* SPU Warm Black */
+        .sidebar img { width: 120px; height: 120px; border-radius: 50%; display: block; margin: 0 auto 20px; border: 2px solid #C7AF7F; object-fit: cover; } /* SPU Historic Gold */
         .sidebar a { display: block; color: #ccc; padding: 15px 30px; text-decoration: none; font-size: 18px; font-weight: 500; transition: 0.3s; }
-        .sidebar a:hover { background-color: #2D2D2D; color: white; border-left: 4px solid #00A8B5; padding-left: 26px; }
+        .sidebar a:hover { background-color: #2D1E21; color: white; border-left: 4px solid #C7AF7F; padding-left: 26px; } /* Hover con Historic Gold */
         
         /* Main Content Area */
         .main-content { margin-left: 250px; padding: 50px; width: 100%; max-width: 900px; }
         .section { min-height: 85vh; padding-top: 20px; margin-bottom: 40px; }
         h1 { font-size: 42px; margin-bottom: 10px; color: #1E1E1E; }
-        .subtitle { font-size: 18px; color: #666; margin-bottom: 40px; }
+        .subtitle { font-size: 18px; color: #555; margin-top: 5px; margin-bottom: 40px; }
         
         /* Headers */
         .domain-category { margin-top: 40px; margin-bottom: 20px; border-bottom: 2px solid #ddd; padding-bottom: 10px; color: #1E1E1E; font-size: 24px; font-weight: bold; }
         
         /* Cards & Buttons */
         .card { background: white; padding: 25px; border: 1px solid #e0e0e0; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .card h4 { margin: 0 0 10px 0; font-size: 22px; color: #00A8B5; }
+        .card h4 { margin: 0 0 10px 0; font-size: 22px; color: #651D32; } /* SPU Legacy Maroon 1 */
         .card p { color: #555; line-height: 1.6; }
         .card ul { color: #555; line-height: 1.6; padding-left: 20px; }
         .card a.btn { display: inline-block; margin-top: 15px; background-color: #eee; padding: 10px 15px; border-radius: 5px; color: #333; text-decoration: none; font-weight: bold; font-size: 14px; transition: 0.2s; border: 1px solid #ccc; }
-        .card a.btn:hover { background-color: #00A8B5; color: white; border-color: #00A8B5; }
+        .card a.btn:hover { background-color: #651D32; color: white; border-color: #651D32; } /* SPU Legacy Maroon 1 */
 
         /* Skills List */
         .skills-list { padding-left: 20px; color: #555; line-height: 1.8; }
@@ -48,116 +48,16 @@
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
         
-        <div style="margin-top: 30px; border-top: 1px solid #333; padding-top: 10px;">
-            <a href="https://github.com/oscar-lopez-02" target="_blank" style="font-size: 16px; color: #00A8B5; padding: 10px 30px;">GitHub Profile &nearr;</a>
-            <a href="https://www.linkedin.com/in/oscar-lopezhz/" target="_blank" style="font-size: 16px; color: #00A8B5; padding: 10px 30px;">LinkedIn Profile &nearr;</a>
+        <div style="margin-top: 30px; border-top: 1px solid #5A4347; padding-top: 10px;">
+            <a href="https://github.com/oscar-lopez-02" target="_blank" style="font-size: 16px; color: #C7AF7F; padding: 10px 30px;">GitHub Profile &nearr;</a>
+            <a href="https://www.linkedin.com/in/oscar-lopezhz/" target="_blank" style="font-size: 16px; color: #C7AF7F; padding: 10px 30px;">LinkedIn Profile &nearr;</a>
         </div>
     </div>
 
     <div class="main-content">
         
         <div id="about" class="section">
-            <h1>Oscar Lopez</h1>
-            <p style="font-size: 20px; color: #00A8B5; font-weight: 600; margin-top: -5px; margin-bottom: 25px;">
-                Senior Electrical Engineering Student | Seattle Pacific University
-            </p>
-            
-            <div class="card" style="border-left: 4px solid #00A8B5;">
-                <h2 style="margin-top: 0; color: #1E1E1E;">About Me</h2>
-                <p>I am a Senior Electrical Engineering student with a minor in Computer Engineering at Seattle Pacific University. My technical focus is on embedded systems, microcontroller programming, and hardware integration.</p>
-                <p>Currently, I am part of an engineering Senior Capstone team developing an AI-powered autonomous rover with SLAM navigation, equipped with a 6-DOF robotic arm. My primary responsibility is the hardware integration and microcontroller logic, which involves bridging the physical components with the electronic systems and utilizing ROS 2 to control the robotic arm. We are partnering across disciplines with a Computer Science team that handles the LLM implementation and spatial mapping to deliver a fully integrated system.</p>
-                <p>I am seeking Electrical Engineering opportunities where I can apply my hands-on hardware experience, systems integration skills, and systematic problem-solving approach to complex technical challenges.</p>
-            </div>
-
-            <div class="card">
-                <h2 style="margin-top: 0; color: #1E1E1E;">Technical Skills</h2>
-                <ul class="skills-list">
-                    <li><strong>Certifications:</strong> MathWorks Certified MATLAB Associate (Expected November 2026) | Altium Certified PCB Design.</li>
-                    <li><strong>Hardware & Electronics:</strong> Analog & Digital Circuit Design, Power Distribution, Active Filters, Motor Control, Sensors, Embedded Systems (Raspberry Pi Pico, Arduino UNO R4), I2C/SPI.</li>
-                    <li><strong>Programming Languages:</strong> C++, Python, Java, MIPS Assembly, MicroPython.</li>
-                    <li><strong>Software & Tools:</strong> Multisim, LTspice, PSCAD, MATLAB, SolidWorks, Altium Designer, Visual Studio Code, Arduino IDE, Thonny, CLion, IntelliJ IDEA, PyCharm, jGRASP, Linux/Ubuntu, Git/GitHub, Wokwi.</li>
-                    <li><strong>Instrumentation & Lab:</strong> Oscilloscopes, Digital Multimeters, Function Generators, PCB Assembly & Testing, Soldering.</li>
-                    <li><strong>Languages:</strong> Spanish (Native), English (Professional Working Proficiency).</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div id="projects" class="section">
-            <h1>Projects</h1>
-            <p class="subtitle">A collection of my work spanning hardware design, embedded systems, and software algorithms.</p>
-
-            <div class="domain-category">Analog & Hardware Design</div>
-            <div class="card">
-                <h4>25 kHz Active Bandpass Filter (Frequency Detector)</h4>
-                <p>Designed and built an 8th-order cascaded Sallen-Key active filter for a team-based IR audio detection system. Successfully isolated a 25 kHz target frequency while achieving severe stopband attenuation for adjacent 10 kHz and 17 kHz signals.</p>
-                <a href="Analog-and-Hardware/25kHz-Bandpass-Filter/index.html" class="btn">View Technical Details &rarr;</a>
-            </div>
-
-            <div class="domain-category">Embedded Systems</div>
-            <div class="card">
-                <h4>Pill Pusher: Automated RFID Medication Dispenser</h4>
-                <p>Collaborated with a team in EE 3280 to design a secure, automated medication dispenser. As the primary firmware developer, I engineered a fully object-oriented MicroPython codebase to integrate I2C OLED displays, SPI RFID scanners, PWM servos, and multi-threaded LED/buzzer alerts into a cohesive state-machine.</p>
-                <a href="Embedded-Systems/Pill-Pusher/index.html" class="btn">View Project Details &rarr;</a>
-            </div>
-
-            <div class="domain-category">Power & Energy Systems</div>
-            <div class="card">
-                <h4>Power Systems Analysis (Coming Soon)</h4>
-                <p>Projects encompassing Load Flow (Power Flow) Analysis and Fault Analysis.</p>
-            </div>
-
-            <div class="domain-category">Software & Algorithms</div>
-            <div class="card">
-                <h4>C++ Data Structures</h4>
-                <p>Implementation of custom Hash Tables and Search Trees for optimized data retrieval and sorting.</p>
-                <a href="Software-and-Algorithms/Hash-Tables/index.html" class="btn">View Repository &rarr;</a>
-            </div>
-
-            <div class="domain-category">Mechanical Design & CAD</div>
-            <div class="card">
-                <h4>SolidWorks Parametric Modeling</h4>
-                <p>CSWA practice problems focusing on parametric modeling, mass properties, and specific material assignments (AISI 1020 Steel).</p>
-                <a href="Mechanical-CAD/CSWA-Practice/index.html" class="btn">View 3D Models &rarr;</a>
-            </div>
-        </div>
-
-        <div id="experience" class="section">
-            <h1>Experience</h1>
-            <p class="subtitle">Professional background in industrial operations, maintenance, and data analysis.</p>
-
-            <div class="card">
-                <h4 style="margin: 0; font-size: 20px;">Sanitation & Maintenance Technician</h4>
-                <p style="color: #00A8B5; font-weight: bold; margin-top: 5px; margin-bottom: 10px;">Ventura Foods | Portland, OR | August 2018 – July 2019</p>
-                <ul style="margin-top: 0;">
-                    <li>Operated automated Clean-in-Place (CIP) systems via HMI touch panels to ensure production line sanitation standards.</li>
-                    <li>Performed mechanical and electrical disassembly/reassembly of industrial pumps, pipelines, and processing machinery for scheduled maintenance.</li>
-                    <li>Managed the safe transport of materials using forklifts and handled industrial chemical agents in compliance with safety regulations.</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <h4 style="margin: 0; font-size: 20px;">Stockroom Supervisor (MRO & Technical Procurement)</h4>
-                <p style="color: #00A8B5; font-weight: bold; margin-top: 5px; margin-bottom: 10px;">Magna International | Mexico City, MX | June 2015 – September 2016</p>
-                <ul style="margin-top: 0;">
-                    <li>Embedded within the Injection Engineering Department, directed a 24/7 technical operations team of 10 personnel and collaborated directly with department superintendents to support a 400+ person molding facility.</li>
-                    <li>Managed a $1.92M annual MRO/CapEx budget, utilizing IBM AS/400 and Xeeva software to execute enterprise procurement workflows, submit MRO requisitions, negotiate with vendors, and collaborate with them to design custom mechanical tooling.</li>
-                    <li>Directed stockroom personnel in maintaining an active inventory of 2,000+ distinct SKUs, implementing strict access controls and chain-of-custody protocols for high-value tooling.</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <h4 style="margin: 0; font-size: 20px;">Administrative Coordinator & Data Analyst</h4>
-                <p style="color: #00A8B5; font-weight: bold; margin-top: 5px; margin-bottom: 10px;">Magna International | Mexico City, MX | August 2012 – May 2015</p>
-                <ul style="margin-top: 0;">
-                    <li>Administered daily production databases, developing advanced Excel macros and pivot tables to track Key Performance Indicators (KPIs) and deliver weekly operational reports to executive management.</li>
-                    <li>Budgeting: Executed purchasing for the Molding production area, managing an annual budget of $2 Million USD.</li>
-                    <li>Quoted and purchased indirect materials for the Molding production area, including tools, equipment, metalworking supplies, stationery, and consumables, while ensuring expenses remained within the budget.</li>
-                </ul>
-            </div>
-            
-        </div>
-
-    </div>
-
-</body>
-</html>
+            <h1 style="margin-bottom: 5px;">Oscar Lopez</h1>
+            <p style="font-size: 20px; color: #651D32; font-weight: 600; margin-top: 0; margin-bottom: 25px;">
+                Senior Electrical Engineering Student | Seattle Pacific University <br>
+                <span style="
